@@ -47,7 +47,21 @@ jobs:
           remote_key: ${{ secrets.DEPLOY_KEY }}
           remote_key_pass: ${{ secrets.PASSPHRASE }}
 
+
           
+      - name: Generate .env file
+        run: |
+          # generate .env file with your desired values
+          echo "DB_HOST=localhost" >> .env
+          echo "DB_PORT=3306" >> .env
+          echo "DB_DATABASE=my_database" >> .env
+          echo "DB_USERNAME=my_username" >> .env
+          echo "DB_PASSWORD=my_password" >> .env
+
+      - name: Set environment variables
+        run: |
+          echo "export $(cat .env | tr '\n' '=')" >> $GITHUB_ENV
+      
       - name: Deploy Readme-all
         # You may pin to the exact commit or the version.
         # uses: Burnett01/rsync-deployments@45d84ad5f6c174f3e0ffc50e9060a9666d09c16e
