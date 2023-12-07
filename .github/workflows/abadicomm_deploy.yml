@@ -50,6 +50,8 @@ jobs:
 
           
       - name: Generate .env file
+        env: 
+          APPNAME: ${{ secrets.APP_NAME }}
         run: |
           # generate .env file with your desired values
           echo "DB_HOST=localhost" >> .env
@@ -57,7 +59,7 @@ jobs:
           echo "DB_DATABASE=my_database" >> .env
           echo "DB_USERNAME=my_username" >> .env
           echo "DB_PASSWORD=my_password" >> .env
-          echo APP_NAME=${{ secrets.APP_NAME }} >> .env
+          echo APP_NAME=$APPNAME >> .env
 
       - name: Set environment variables
         run: |
