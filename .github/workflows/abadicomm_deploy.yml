@@ -89,7 +89,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          script: whoami
+          script: pwd; ls
 
                 
       
