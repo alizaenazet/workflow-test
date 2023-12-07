@@ -1,0 +1,81 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: make new readme file
+        run: touch README3.md
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      
+      - name: Deploy Readme-3
+        # You may pin to the exact commit or the version.
+        # uses: Burnett01/rsync-deployments@45d84ad5f6c174f3e0ffc50e9060a9666d09c16e
+        uses: Burnett01/rsync-deployments@6.0.0
+        with:
+          # The switches
+          switches: -avzr --delete --exclude=".git" --exclude=".github"
+          # The local path
+          path: /README3.md
+          # The remote path
+          remote_path: /home/abad8173/public_html
+          # The remote host
+          remote_host: srv166.niagahoster.com
+          # The remote port
+          remote_port: 65002
+          # The remote user
+          remote_user: abad8173
+          # The remote key
+          remote_key: ${{ secrets.DEPLOY_KEY }}
+
+          
+      - name: Deploy Readme-all
+        # You may pin to the exact commit or the version.
+        # uses: Burnett01/rsync-deployments@45d84ad5f6c174f3e0ffc50e9060a9666d09c16e
+        uses: Burnett01/rsync-deployments@6.0.0
+        with:
+          # The switches
+          switches: -avzr --delete --exclude=".git" --exclude=".github" --exclude="README3.md"
+          # The local path
+          path: /
+          # The remote path
+          remote_path: /home/abad8173/project
+          # The remote host
+          remote_host: srv166.niagahoster.com
+          # The remote port
+          remote_port: 65002
+          # The remote user
+          remote_user: abad8173
+          # The remote key
+          remote_key: ${{ secrets.DEPLOY_KEY }}
+          
+                
+      
+            
