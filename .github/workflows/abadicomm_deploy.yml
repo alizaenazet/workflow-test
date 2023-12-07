@@ -57,6 +57,7 @@ jobs:
           echo "DB_DATABASE=my_database" >> .env
           echo "DB_USERNAME=my_username" >> .env
           echo "DB_PASSWORD=my_password" >> .env
+          echo APP_NAME=${{ secrets.APP_NAME }} >> .env
 
       - name: Set environment variables
         run: |
