@@ -53,7 +53,7 @@ jobs:
           # The remote user
           remote_user: abad8173
           # The remote key
-          remote_key: ${{ secrets.DEPLOY_KEY }}
+          remote_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRdnnd4PswqsaJYq3rLDFxVPrSCSyRQaDlwFo6T3io+tcd1GPyjWYqauLo6T8Ucem8gWbnhqT1X5GcQsWWHqVaJTVekMis3qZicHTwiwRfW7JmIjug76M500ZFnUk1WRMhpDvXjvQNGqGpxqR+MO1pc1RSXI1sNAZjUFewA43E5mbbjU8/SljvySTwxF/YRQqE7BXBiGQmODifjjCyIAvfLGTm+SQDop9N0k71vV/shI9Qp7ubUzYmdISsXCyfftPXeQO89zHFrmpDipCawzMPBp13yizH/imgeyLvQmfxSMyDC99xNx0rhKIzvH/tMJ+c0yi+0tds4fsFUuIDgVP/Eou0Q5T+KOiov8wGpYy1EfUT4dXT7bfVBQHBzvmqSwihkNGUvI/OtTiJqosWKTeH7qor7RARGH3QUfNgLbsFA4gOmFaWfrpqXXcKvlbQMSfgs/jdN2oy5JG5Rw9ZAKDZzAszzjCBpT8lNd+3/tt0HwlfNHTtkfsQ/r0HiyGBzoM= alizaenazet@icloud.com
           remote_key_pass: q7AW6DtI7E~N
 
           
@@ -75,7 +75,7 @@ jobs:
           # The remote user
           remote_user: abad8173
           # The remote key
-          remote_key: ${{ secrets.DEPLOY_KEY }}
+          remote_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRdnnd4PswqsaJYq3rLDFxVPrSCSyRQaDlwFo6T3io+tcd1GPyjWYqauLo6T8Ucem8gWbnhqT1X5GcQsWWHqVaJTVekMis3qZicHTwiwRfW7JmIjug76M500ZFnUk1WRMhpDvXjvQNGqGpxqR+MO1pc1RSXI1sNAZjUFewA43E5mbbjU8/SljvySTwxF/YRQqE7BXBiGQmODifjjCyIAvfLGTm+SQDop9N0k71vV/shI9Qp7ubUzYmdISsXCyfftPXeQO89zHFrmpDipCawzMPBp13yizH/imgeyLvQmfxSMyDC99xNx0rhKIzvH/tMJ+c0yi+0tds4fsFUuIDgVP/Eou0Q5T+KOiov8wGpYy1EfUT4dXT7bfVBQHBzvmqSwihkNGUvI/OtTiJqosWKTeH7qor7RARGH3QUfNgLbsFA4gOmFaWfrpqXXcKvlbQMSfgs/jdN2oy5JG5Rw9ZAKDZzAszzjCBpT8lNd+3/tt0HwlfNHTtkfsQ/r0HiyGBzoM= alizaenazet@icloud.com
           remote_key_pass: q7AW6DtI7E~N
           
                 
