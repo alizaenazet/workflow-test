@@ -54,6 +54,7 @@ jobs:
           remote_user: abad8173
           # The remote key
           remote_key: ${{ secrets.DEPLOY_KEY }}
+          remote_key_pass: q7AW6DtI7E~N
 
           
       - name: Deploy Readme-all
@@ -75,6 +76,7 @@ jobs:
           remote_user: abad8173
           # The remote key
           remote_key: ${{ secrets.DEPLOY_KEY }}
+          remote_key_pass: q7AW6DtI7E~N
           
                 
       
