@@ -51,15 +51,10 @@ jobs:
           
       - name: Generate .env file
         env: 
-          APPNAME: ${{ vars.production.APP_NAME }}
+          ENV_VAR: ${{ secrets.PRODUCTION_ENV_VAR }}
         run: |
           # generate .env file with your desired values
-          echo "DB_HOST=localhost" >> .env
-          echo "DB_PORT=3306" >> .env
-          echo "DB_DATABASE=my_database" >> .env
-          echo "DB_USERNAME=my_username" >> .env
-          echo "DB_PASSWORD=my_password" >> .env
-          echo APP_NAME=$APPNAME >> .env
+          echo $ENV_VAR >> .env
 
       - name: Set environment variables
         run: |
