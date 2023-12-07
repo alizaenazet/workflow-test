@@ -51,7 +51,7 @@ jobs:
           
       - name: Generate .env file
         env: 
-          APPNAME: ${{ secrets.APP_NAME }}
+          APPNAME: ${{ secrets.USER }}
         run: |
           # generate .env file with your desired values
           echo "DB_HOST=localhost" >> .env
