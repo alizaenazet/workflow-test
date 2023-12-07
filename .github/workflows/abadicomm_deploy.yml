@@ -54,7 +54,7 @@ jobs:
           ENV_VAR: ${{ secrets.PRODUCTION_ENV_VAR }}
         run: |
           # generate .env file with your desired values
-          echo $ENV_VAR >> .env
+          echo "$ENV_VAR" >> .env
 
       - name: Set environment variables
         run: |
