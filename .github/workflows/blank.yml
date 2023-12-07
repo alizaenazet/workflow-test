@@ -46,19 +46,19 @@ jobs:
         with:
           # The switches
           switches: -avzr --delete --exclude=".git" --exclude=".github"
-          # The local path
+          # The local path of dir/file will added
           path: /README3.md
           # The remote path
-          remote_path: /home/abad8173/public_html
+          remote_path: /home/${{ secrets.USER }}/public_html
           # The remote host
-          remote_host: srv166.niagahoster.com
+          remote_host: ${{ secrets.HOST }}
           # The remote port
-          remote_port: 65002
+          remote_port: ${{ secrets.PORT }}
           # The remote user
-          remote_user: abad8173
+          remote_user: ${{ secrets.USER }}
           # The remote key
           remote_key: ${{ secrets.DEPLOY_KEY }}
-          remote_key_pass: q7AW6DtI7E~N
+          remote_key_pass: ${{ secrets.PASSPHRASE }}
 
           
       - name: Deploy Readme-all
@@ -68,19 +68,19 @@ jobs:
         with:
           # The switches
           switches: -avzr --delete --exclude=".git" --exclude=".github" --exclude="README3.md"
-          # The local path
+          # The local path of dir/file will added
           path: /
           # The remote path
-          remote_path: /home/abad8173/project
-          # The remote host
-          remote_host: srv166.niagahoster.com
+          remote_path: /home/${{ secrets.USER }}/project
+           # The remote host
+          remote_host: ${{ secrets.HOST }}
           # The remote port
-          remote_port: 65002
+          remote_port: ${{ secrets.PORT }}
           # The remote user
-          remote_user: abad8173
+          remote_user: ${{ secrets.USER }}
           # The remote key
           remote_key: ${{ secrets.DEPLOY_KEY }}
-          remote_key_pass: q7AW6DtI7E~N
+          remote_key_pass: ${{ secrets.PASSPHRASE }}
           
                 
       
